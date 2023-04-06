@@ -17,8 +17,15 @@ const useStyles = makeStyles()((theme) => {
     container: {
       backgroundColor: "#f1f0f6",
       width: "100%",
+
       position: "relative",
-      padding: "1rem 25rem 3rem 25rem",
+      padding: "1rem 0 3rem 25rem",
+
+      [theme.breakpoints.up("xxl")]: {
+        padding: "4rem 25rem",
+        maxWidth: 2240,
+      },
+
       [theme.breakpoints.down("xxl")]: {
         padding: "1rem 15rem 3rem 15rem",
       },
@@ -53,6 +60,11 @@ const useStyles = makeStyles()((theme) => {
 
       backgroundSize: "cover",
       backgroundRepeat: "no-repeat",
+
+      [theme.breakpoints.up("xxl")]: {
+        padding: "4rem 0",
+        maxWidth: 2240,
+      },
     },
     actionText: {
       color: theme.palette.common.white,
@@ -87,6 +99,7 @@ const useStyles = makeStyles()((theme) => {
     },
     stepsBlock: {
       height: "20rem",
+
       [theme.breakpoints.down("xl")]: {
         height: "22rem",
       },
@@ -99,6 +112,7 @@ const useStyles = makeStyles()((theme) => {
         width: "100%",
       },
     },
+
     linkText: {
       color: theme.palette.common.cyan,
       fontSize: "4rem",
@@ -106,6 +120,7 @@ const useStyles = makeStyles()((theme) => {
     },
     stepDescription: {
       paddingTop: "1rem",
+      paddingLeft: "1rem",
       color: theme.palette.common.grayish_violet,
       fontSize: "1rem",
       [theme.breakpoints.down("lg")]: {
@@ -274,26 +289,24 @@ const MainContent = () => {
           >
             <img alt="" src={FullyCustomizableIcon}></img>
           </Grid>
-          <Grid
-            item
-            container
-            justifyContent={matchesLG ? "center" : "flex-start"}
-            alignItems="center"
-          >
-            <Typography variant="h4" style={{ paddingTop: "1rem" }}>
-              Fully Customizable
-            </Typography>
-          </Grid>
-          <Grid
-            item
-            container
-            justifyContent={matchesLG ? "center" : "flex-start"}
-            alignItems="center"
-          >
-            <Typography variant="body" className={classes.stepDescription}>
-              Improve brand awareness and content discoverability through
-              custo,ozable links, supercharging audience engagement.
-            </Typography>
+
+          <Grid className={classes.testClass}>
+            <Grid item container justifyContent={"center"} alignItems="center">
+              <Typography variant="h4" style={{ paddingTop: "1rem" }}>
+                Fully Customizable
+              </Typography>
+            </Grid>
+            <Grid
+              item
+              container
+              justifyContent={matchesLG ? "center" : "flex-start"}
+              alignItems="center"
+            >
+              <Typography variant="body" className={classes.stepDescription}>
+                Improve brand awareness and content discoverability through
+                custo,ozable links, supercharging audience engagement.
+              </Typography>
+            </Grid>
           </Grid>
         </Grid>
       </Grid>

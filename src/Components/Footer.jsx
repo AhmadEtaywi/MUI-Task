@@ -10,36 +10,35 @@ const useStyles = makeStyles()((theme) => {
   return {
     footer: {
       backgroundColor: theme.palette.common.very_dark_blue,
-      width: "100%",
-      maxWidth: 989,
       position: "relative",
       padding: "4rem 25rem",
-      [theme.breakpoints.down("xxl")]: {
-        padding: "4rem 15rem",
-        // maxWidth: 1536,
-        maxWidth: 1039,
-        width : "100%"
-
-      },
-      [theme.breakpoints.down("xl")]: {
-        padding: "4rem 9rem",
-        // maxWidth: 1200,
-        maxWidth: 989,
-
-      },
-      [theme.breakpoints.down("lg")]: {
-        padding: "4rem 5rem",
-        maxWidth: 900,
-      },
-      [theme.breakpoints.down("md")]: {
-        padding: "4rem 2rem",
-        maxWidth: 600,
-      },
-      [theme.breakpoints.down("sm")]: {
-        padding: "4rem 0  ",
+      [theme.breakpoints.between("xs", "sm")]: {
+        padding: "4rem 0",
         maxWidth: "100%",
       },
+      [theme.breakpoints.between("sm", "md")]: {
+        padding: "4rem 2rem",
+        maxWidth: 720,
+      },
+      [theme.breakpoints.between("md", "lg")]: {
+        padding: "4rem 5rem",
+        maxWidth: 865,
+      },
+      [theme.breakpoints.between("lg", "xl")]: {
+        padding: "4rem 9rem",
+        maxWidth: 989,
+      },
+      [theme.breakpoints.between("xl", "xxl")]: {
+        padding: "4rem 15rem",
+        maxWidth: 1039,
+      },
+      [theme.breakpoints.up("xxl")]: {
+        padding: "4rem 15rem",
+        maxWidth: 1760,
+      },
+
     },
+
     logo: {
       height: "2.5rem",
       width: "7.5rem",
@@ -63,8 +62,8 @@ const useStyles = makeStyles()((theme) => {
       },
     },
     imageWrapper: {
-      height: "1.5rem",
-      width: "1.5rem",
+      height: "1.1rem",
+      width: "1.1rem",
       margin: 0,
       padding: 0,
     },
@@ -218,7 +217,6 @@ function Footer() {
           <Grid item>
             <Link href="https://www.instagram.com/" target="_blank">
               <div className={classes.imageWrapper}>
-                {/* <IconInstagram color={"#2acfcf"} /> */}
                 <IconInstagram color={"#ffffff"} />
               </div>
             </Link>

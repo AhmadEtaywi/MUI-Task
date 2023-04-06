@@ -34,7 +34,7 @@ const useStyles = makeStyles()((theme) => {
     message: {
       ...theme.typography.body,
       color: theme.palette.common.grayish_violet,
-      fontSize: "1.5rem",
+      fontSize: "1.4rem",
       textAlign: "left",
       [theme.breakpoints.down("lg")]: {
         fontSize: "1rem",
@@ -50,7 +50,7 @@ const useStyles = makeStyles()((theme) => {
       borderRadius: "50px",
       textTransform: "none",
       margin: "2rem 0",
-      height: "5rem",
+      height: "4rem",
       width: "12rem",
       fontSize: "1.4rem",
       [theme.breakpoints.down("xl")]: {
@@ -82,11 +82,10 @@ const useStyles = makeStyles()((theme) => {
       },
     },
     title: {
-      // asdasdasd
       fontSize: "5rem",
       textAlign: "left",
       [theme.breakpoints.down("xxl")]: {
-        fontSize: "4.5rem",
+        fontSize: "4rem",
       },
       [theme.breakpoints.down("xl")]: {
         fontSize: "4.5rem",

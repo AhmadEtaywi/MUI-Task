@@ -105,10 +105,10 @@ const StyledTabs = styled((props) => (
   },
   "&.MuiTabs-root": {
     width: "calc(100% - 7.5rem)",
-    paddingLeft: "2rem",
   },
   "& .MuiTabs-flexContainer": {
     display: "block",
+    paddingLeft: "2rem",
   },
 });
 
@@ -119,7 +119,6 @@ const StyledTab = styled((props) => <Tab disableRipple {...props} />)(
     fontSize: theme.typography.pxToRem(15),
     marginRight: theme.spacing(1),
     color: theme.palette.primary.light,
-    // fontSize: '1.2rem',
     [theme.breakpoints.down("xl")]: {
       fontSize: "1rem",
     },
@@ -141,7 +140,6 @@ const ButtonTab = styled((props) => <Tab disableRipple {...props} />)(
     borderRadius: "20px",
     minHeight: "2.5rem",
     padding: 0,
-    // fontSize: '1.2rem',
     [theme.breakpoints.down("xl")]: {
       fontSize: "1rem",
     },
@@ -173,7 +171,7 @@ const Header = () => {
   const [openDrawer, setOpenDrawer] = useState(false);
 
   const tabs = (
-      <StyledTabs variant="fullWidth">
+    <StyledTabs value={1} variant="fullWidth">
       <StyledTab label="Features" />
       <StyledTab label="Pricing" />
       <StyledTab label="Resources" />
@@ -265,7 +263,6 @@ const Header = () => {
           {matchesMD ? drawer : tabs}
         </Toolbar>
       </AppBar>
-      {/* <div className={classes.toolbarMargin} /> */}
     </Fragment>
   );
 };
